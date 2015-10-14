@@ -1,0 +1,202 @@
+	
+\section{Quantenmechanik}
+	\subsection{Mechanik}
+		Der einfachste Lagrange lautet 
+			\begin{equation*}
+				L (x,\dot{x}) = \frac{m}{2} \dot{x}^2 - V(x) 
+			\end{equation*}
+		Um jetzt die Hamiltonfunktion zu konstruieren, schreiben wir:
+			\begin{equation*}
+				p=
+				\frac{\partial L}{\partial \dot{x}}
+				(=m \dot{x})
+			\end{equation*}
+		Sodass
+			\begin{equation*}
+				H(x,p)= 
+				p \dot{x} - L(x,\dot{x}) = 
+				\frac{p^2}{2m} + V(x)
+			\end{equation*}
+		Poisson-Klammern:
+			\begin{equation}
+				\{A,B\}=
+				\frac{\partial A}{\partial x} \frac{\partial B}{\partial p}
+				- \frac{\partial B}{\partial x} \frac{\partial A}{\partial p}
+			\end{equation}
+		Beispiele mit Spezialfällen:
+		\begin{tabbing}
+			\hspace{0.4\linewidth} \= \hspace{0.6\linewidth} \= \hfill \kill
+			$\frac{\diff F}{dt} = \dot{F} = \{F,H\} + \frac{\partial F}{\partial t}$ \> 
+			Phasenraumfunktion $F(x,p,t)$ \\ \\
+			$\frac{\diff H}{dt} = \{H,H\} + \frac{\partial H}{\partial t} = \frac{\partial H}{\partial t}$ \>
+			Falls $H$ nicht explizit zeitabhängig, dann ist Energie \\
+			\hfill \>  in H erhalten. \\  %Unschöne Lösung
+			$\frac{\diff x}{\diff t} = \{x,H\} = \frac{\partial H}{\partial p}$ \>
+			$=\frac{p}{m} \rightarrow$ Geschwindigkeit ist Impuls durch Masse. \\ \\
+			$\frac{\diff p}{\diff t} = \{p,H\} = -\frac{\partial H}{\partial x}$ \>
+			Newton: $F= ma= \dot{p} = \text{\grqq} - \nabla V \text{\grqq} $	%keine ahnung wie ich das in anführugnszeichen setzten kann
+		\end{tabbing}
+		Fundamentale Poissonklammern:
+			\begin{equation}
+				\begin{split}
+					\{x,x\} &=\{p,p\}= 0 \\
+					\{x,p\} &= 1
+				\end{split}
+			\end{equation}
+	\subsection{Quantenmechanik}
+		\^{A} ist Operator. Und $e$ hoch eine Matrix ist definiert als:
+			\begin{equation*}
+				e^{\hat{A}}= \sum_{n=0}^{\infty} \frac{\hat{A}^n}{n!}
+			\end{equation*}
+		Der Operator $\hat{p}$ erzeugt Translationen
+			\begin{align*}
+				e^{\frac{i}{\hbar} a \hat{p}} \psi(x) &= 
+				\psi(x+a) \\
+				&= e^{a \frac{\partial}{\partial x}} \psi(x) \\
+				&= \sum_{n=0}^{\infty} \frac{1}{n!} a^n \frac{\partial^n}{\partial x^n} \psi(x) \\
+				& \overset{Taylorreihe}{=} 
+				\sum_{n} \frac{a^n}{n!} \psi^{(n)}(x)				
+			\end{align*}
+		$\Rightarrow \hat{p} = \frac{\hbar}{i} \frac{\partial}{\partial x}$
+			\begin{align*}
+				(\hat{x} \hat{p} - \hat{p} \hat{x}) \psi(x) &= \\
+				&= [\hat{x}, \hat{p}] \psi(x) \\
+				&= \frac{\hbar}{i} 
+				\left( x \frac{\partial}{\partial x} \psi 
+				- \frac{\partial}{\partial x} x \psi
+				\right) \\
+				&=\frac{\hbar}{i} \left( x \psi' - \psi - x\psi' \right) \\
+				&=i \hbar \psi(x) \text{~für alle~} \psi (x)
+			\end{align*}
+		$ \Rightarrow$ \fbox{$[\hat{x}, \hat{p}] = i\hbar $} \hspace{0.6cm} Born-Jordan Relation
+		
+		Beschränkte Operatoren wirken auf Zustände im Hilbertraum $L_2(\mathds{C}) = H$:
+			\begin{equation*}
+				\hat{A} \ket{n} = a_n \ket{n} 
+			\end{equation*}
+		Wobei $a_n$ Eigenwerte sind und $\ket{n}$ Eigenzustände\footnote{In der Vorlesung wurde $\ket{a_n}$. benutzt.} $\in H$.
+		Da $\hat{A} = \hat{A}^\dagger$ selbstadjungiert ist, $\Rightarrow a_n \in \mathds{R}$ und es gilt $\braket{a_m|a_n} = \delta_{mn}$ (normiert) \grqq Strahl in H\grqq.
+		
+		Es gilt die Vollständigkeitsrelation:
+			\begin{equation*}
+				\sum_n \ket{a_n} \bra{a_n} = \mathds{1}
+			\end{equation*}
+		bzw. $\{ \ket{a_n} \}$ ist Basis von $H$, falls $\hat{A}$ ein rein diskretes Spektrum $\{a_n\}$ hat. 
+		
+		Allgemeiner: Das Gelfand Tripel:
+			\begin{equation*}
+				\{\Phi, H, \Phi'\} \text{~mit~} \Phi \subset H \subset \Phi'
+			\end{equation*}
+		Dann ist $\ket{a_n} \in \Phi \Rightarrow \braket{a_n | a_n} = 1$ normierbar.
+		
+		Sind alle $\ket{a_n} \in \Phi$ dann gilt $\Phi = H = \Phi'$ und $\hat{A}$ hat ein rein diskretes Spektrum.
+		Aber es gibt auch \underline{uneigentliche} Eigenvektoren
+			\begin{equation*}
+				\ket{x}, \ket{p} \in \Phi'
+			\end{equation*}
+		dies ist eine uneigentliche Basis von H, aber $\ket{x} \notin H$
+			\begin{align*}
+				\hat{x} \ket{x} &= x \ket{x} ~,& \braket{ x | x'} &= \delta(x-x') ~,& \int dx \ket{x} \bra{x} &= \mathds{1} \\		
+				\hat{p} \ket{p} &= p \ket{p} ~,& \braket{ p|p'} &= 2\pi \delta (x-x') ~,& \int \frac{dp}{2\pi} \ket{p} \bra{p} &= \mathds{1}
+			\end{align*}		
+		Wenn wir eine Fourier Transformation machen, fügt man im Endeffekt einfach eine $\mathds{1}$ ein:
+			\begin{align*}
+				\psi(x) =
+				\braket{ x|\psi } = \braket{x | \int \frac{\diff p}{2\pi} | p} \braket{p | |\psi} =
+				\int \frac{\diff p}{2\pi} \braket{x|p} \braket{p|\psi} = 
+				\int \frac{\diff p}{2\pi} e^{-ipx} \tilde{\psi}(p)
+			\end{align*}
+		Der Hamiltonoperator erzeugt zeitliche Translationen:
+			\begin{align*}
+				\hat{H} \ket{\psi(t)} &= i\hbar \frac{\partial}{\partial t} \ket{\psi(t)}
+				\Rightarrow \ket{\psi(t)} = \hat{U}_t \ket{\psi(0)} \\
+				\text{mit~} U_{\hat{t}} &= \text{T} \exp \left( -\frac{i}{\hbar} \hat{H} t \right)
+			\end{align*}
+		Wobei T ein Zeitoperator\footnote{Hier hat Prof. Bali kurz erklärt, wie T auf die Exponentialfunktion wirkt, aber ich konnte es bis jetzt nicht verstehen.} ist und $\hat{H}=H(\hat{x}, \hat{p})$ aber $[\hat{x}, \hat{p}] \neq 0$. 
+		Allgemein gilt $e^A e^B \neq e^{A+B}$ wenn $[A,B] \neq 0$.
+		
+		$\hat{U}_t$ ist unitär: 		
+			\begin{equation}
+				\hat{U}_t + \hat{U}_t = \hat{U}_{-t} \hat{U}_t = \mathds{1}.
+			\end{equation}
+		Mögliche Messergebnisse von $A$ zur Zeit $t$: $a_n$
+		Erwartungswert:	
+			\begin{align*}
+				\erw{A}_\psi (t) = \braket{\psi(t) | \hat{A} | \psi(t)} = \sum_n \braket{\psi(t) | \hat{A} | n} \braket{n | \psi(t)} = \sum_n a_n 
+				\underbrace{\left| \braket{\psi(t) | n} \right|^2}_{\substack{|c_n(t)|^2}}				
+			\end{align*}
+		Dabei ist $|c_n(x)|^2$ die Wahrscheinlichkeit den Zustand $\ket{n}$ anzutreffen.
+			\begin{align*}
+				c_n(t) &= \\
+				&= \braket{\psi(t) | n} \\
+				&= \braket{\psi(0) | \hat{U}_t^\dagger | n} \\
+				&= \braket{\psi(0) | \text{T} e^{\frac{i}{\hbar} \hat{H} t} | n} \\
+				& \overset{\hat{H}\ket{m} = E_m \ket{m}}{=} 
+				\sum_m \braket{\psi(0) | \text{T} e^{ \frac{i}{\hbar} \hat{H} t} | m} \braket{m | n} \\
+				&= \sum_m \braket{\psi(0) | m} \braket{m | n} e^{ \frac{i}{\hbar} E_m t}
+			\end{align*}
+		So kann man auch schreiben:
+			\begin{equation*}
+				\erw{A}_\psi (t) =
+				\sum_{n,m,k} a_n e^{ \frac{i}{\hbar} (E_m - E_k) t} 
+				\braket{\psi(0) | m} \braket{k | \psi(0)} \braket{m | n} \braket{n | k}
+			\end{equation*}
+		Falls $[\hat{H} , \hat{A}] = 0$, dann existiert simultanes System von Eigenzuständen $\leadsto \braket{m | n} = \delta_{mn}$ (für nicht-entarteten Fall).
+	\subsection{Schrödinger- und Heisenbergbild}
+		\begin{tabular*}{\linewidth}{l l}
+			Schrödinger Bild: & Heisenberg Bild: \\ %hier irgendwie noch abtrennung einbauen
+			zeitunabhängige Operatoren $\hat{A}$ & zeitabhängige Operatoren $\hat{A}_H(t)$ \\
+			zeitabhängige Zustände $\ket{\psi(t)}$ & zeitunabhängige Zustände $\ket{\psi}_H$
+		\end{tabular*}
+	Damit 
+		\begin{align*} %H vor braket sieht nicht schön aus
+			&\braket{\psi'(t) | \hat{A} | \psi(t)} \equiv~_H\braket{\psi' | \hat{A}_H(t) | \psi}_H \\
+			&\Rightarrow \hat{A}_H(t) = \hat{U}_t^\dagger \hat{A} \hat{U}_t ~,~ \ket{\psi}_H = \ket{\psi(0)}
+		\end{align*}	
+	Energie Eigenzustände:
+		\begin{align*}
+			\hat{H} \ket{n} &= E_n \ket{n} \Rightarrow H \ket{n(t)} = E_n \ket{n(t)} = i\hbar \frac{\partial}{\partial t} \ket{n(t)} \\
+			\ket{n(t)} &= \ket{n(0)} e^{-\frac{i}{\hbar} E_n t} = \ket{n} e^{- \frac{i}{\hbar} E_n t} = \ket{n} e^{-\frac{i}{\hbar} E_n t} 
+		\end{align*}
+	$\Rightarrow \ket{n} = \ket{n}_H$ für \grqq stationäre \grqq Zustände.
+	
+	\underline{Ehrenfesttheorem:}
+		\begin{align}\nonumber
+			i \hbar \frac{\diff}{\diff t} \langle \hat{A} \rangle_\psi &= \\ \nonumber
+			&= i \hbar \frac{\diff}{\diff t} \Braket{\psi(t) | \hat{A} | \psi(t)} \\ \nonumber
+			&= i \hbar \left( \Braket{\dot{\psi} | \hat{A} | \psi} + \Braket{\psi | \hat{A} | \dot{\psi}} + \Braket{\psi | \dot{\hat{A}} | \psi} \right) \\ \nonumber
+			&= \left( \Braket{\psi | - \hat{H} \hat{A} | \psi} + \Braket{\psi | \hat{H} \hat{A} | \psi} + i\hbar \frac{\partial \erw{\hat{A}}}{\partial t} 
+			\right) \\ \nonumber
+			&= \Erw{\left[\hat{A} , \hat{H} \right]}_\psi + i\hbar \frac{\partial \erw{\hat{A}}}{\partial t} & \\ \nonumber
+			&~ &\Rightarrow \text{\fbox{$\frac{\diff}{\diff t} \erw{\hat{A}}_\psi = -\frac{i}{\hbar} \Erw{\left[ \hat{A} , \hat{B} \right]} + \frac{\partial}{\partial t} \erw{\hat{A}}$}} \\
+		\end{align}
+	\underline{Beispiel:}
+		\begin{align*}
+			\hat{A} &= \hat{p} , \text{~mit~} \hat{p} = \frac{i}{\hbar} \frac{\partial}{\partial x} \text{~und~}
+			\hat{V} = V(x) \\
+			\frac{\diff \erw{\hat{p}}}{\diff t} &=
+			- \frac{i}{\hbar} \Erw{\left[ \hat{p}, \hat{V}\right]} = - \Erw{\frac{\partial \hat{V}}{\partial x}} 
+		\end{align*}
+	\underline{Heisenberggleichung:}
+		\begin{align}
+			\text{\fbox{$ \frac{\diff \hat{A}_H(t)}{\diff t}
+					= - \frac{i}{\hbar} \left[ \hat{A}_H , \hat{H}\right]
+					+ \frac{\partial \hat{A}_H}{\partial t}	$}}
+		\end{align}
+	ist äquivalent zur \underline{Schrödingergleichung:}
+		\begin{equation}
+			\text{\fbox{$ \frac{\diff \ket{\psi(t)}}{\diff t} =
+					- \frac{i}{\hbar} \hat{H} \ket{\psi(t)}
+					$}}
+		\end{equation}
+	\subsection{Harmonischer Oszillator}
+		\begin{align*}
+			H &= \frac{p^2}{2m} + \frac{m}{2} \omega^2 x^2 &y\coloneqq \sqrt{\frac{m \omega}{\hbar} x} \\
+			&\Rightarrow H 
+			= \hbar \left(- \frac{1}{2} \frac{\partial^2}{\partial y^2} 
+			+ \frac{1}{2} y^2\right)
+			= \hbar \omega \tilde{H} 
+			&\text{mit~} \tilde{H} = \frac{1}{2} \left(\tilde{p}^2 + y^2\right)\\
+			&\Rightarrow \left[ y, \tilde{p}\right] = i 
+			&\text{~wobei~} \tilde{p} =-i \frac{\partial}{\partial y} \\
+		\end{align*} %find ich auch noch unschön.

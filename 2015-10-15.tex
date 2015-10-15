@@ -1,0 +1,115 @@
+	wobei 
+		\begin{align*}
+			\text{Vernichtnungsoperator:~} a &= \frac{1}{\sqrt{2}} 
+			\left( y + i \tilde{p} \right) \\
+			\text{Erzeugungsoperator:~} a^\dagger &= \frac{1}{\sqrt{2}} 
+			\left( y - i \tilde{p} \right)
+		\end{align*}
+	Und da dann
+		\begin{align*}
+			[a , a^\dagger] &= 1 &\text{~oder~} a a^\dagger &= a^\dagger a + 1 \\
+			\Rightarrow \tilde{H} = \left( a^\dagger a + \frac{1}{2} \right)& \\
+			\text{und somit~} 
+			y &= \frac{1}{\sqrt{2}} \left( a + a^\dagger \right),& 
+			\tilde{p} &= \frac{1}{\sqrt{2}} \left( a - a^\dagger \right)
+		\end{align*}
+	Sei nun:
+		\begin{align*}
+			\tilde{H} \ket{n} &= \epsilon_n \ket{n} &\left( H \ket{n} = E_n \ket{n} 
+			\Rightarrow E_n = \hbar \omega \epsilon_n \right)
+			a^\dagger a \ket{n} = \left( \epsilon_n - \frac{1}{2} \right) \ket{n}
+		\end{align*}
+	(n ist Anzahl der Knoten (Nullstellen) der Wellenfunktionen.)
+	Aus QM 1:
+		\begin{align*}
+			a \ket{n} &= \sqrt{n} \ket{n-1} \\
+			a^\dagger \ket {n} &= \sqrt{n+1} \ket{n+1} \\
+			&\Rightarrow \epsilon_{n+1} = \epsilon_n + 1
+		\end{align*}
+	mit $n = 0, 1, 2 \ldots$ 
+		\begin{align*}
+			&\epsilon_n = n + \frac{1}{2} \leadsto E_n = \hbar \omega \left(n + \frac{1}{2} \right) \\
+			&\text{und~} \underbrace{a^\dagger a}_{\substack{N}}
+			%\footnote{\text{Nummernoperator (Teilchenzahloperator)}}
+			\ket{n} = n \ket{n}
+		\end{align*} %ich hab die footnote nicht machen können
+	Somit ist $\tilde{H} = N + \frac{1}{2}$-
+	
+\section{Zeitabhängige Störung}
+%\numberwithin{equation}{chapter}
+%\setcounter{equation}{1}
+	\subsection{Zeitabhängige Störungstheorie und das Wechselwirkungsbild}
+	Betrachte 
+		\begin{equation*}
+			H(t) = H^0 + H^1 (t)
+		\end{equation*}
+	$H^0$ ist zeitunabhängig: $H^1(t) = 0$ für $t < t_i$ oder $t > t_f$
+	Ungestörtes System: 
+		\begin{align*}
+			H^0 \ket{n} &= E_n \ket{n} = \hbar \omega_n \ket{n} \\
+			\ket{\psi(t)} &= \sum_n \braket{n | \psi(t_0)} e^{-i \omega_n (t-t_0)} \ket{n} \text{~für~} t, t_0 < t_i (\text{oder~} t, t_0 > t_f)
+		\end{align*}
+	Von nun an: $\ket{\psi(t_0)} = \ket{n}$ für $t_0 < t_i$
+		\begin{equation*}
+			\Rightarrow \boxed{\ket{\psi (t)} = e^{-i \omega_n (t-t_0)} \ket{n}
+			} \text{~für~} t_0, t < t_i
+		\end{equation*}		
+	Formale Lösung von 
+		\begin{equation*}
+			i \hbar \frac{\diff}{\diff t} \ket{\psi(t)}
+			= H^0 \ket{\psi(t)}
+		\end{equation*}			
+	Ist
+		\begin{equation*}
+			\Rightarrow \ket{\psi(t)} = \text{T} e^{-\frac{i}{\hbar} H^0 (t-t_0)} 
+			\ket{\psi(t_0)} = \U^0(t-t_0) \ket{\psi(t_0)}
+		\end{equation*}
+	Achntung: T ist Zeit\textbf{ordnungs}operator und $\U^0(t-t_0)$ ist Zeit\textbf{entwicklungs}operator.
+	Eigenschaften:
+		\begin{align*}
+			\left.
+			\begin{aligned}
+				\U^0(t_1) \U^0(t_2) &= \U^0(t_1 + t_2) \\
+				\U^0(-t) &= \U^{0\dagger} (t)		
+			\end{aligned}
+			\right\} \U^{0\dagger} (t) \U^0 (t) = \mathds{1}
+		\end{align*}
+		\begin{align*}
+			1 &= \braket{\psi(t) | \psi(t)} \\
+			&= \braket{\psi(t_0) | \U^{0 \dagger} (t-t_0) \U^0 (t-t_0) | \psi(t_0)} \\
+			&= \braket{\psi(t_0) | \psi(t_0)}
+		\end{align*}
+	Norm bleibt erhalten $\Rightarrow U^0$ ist unitär! \\
+	Betrachte nun 
+		\begin{equation*}
+			i \hbar \frac{\diff}{\diff t} \ket{\psi(t)} = H(t) \ket{\psi(t)}
+		\end{equation*}
+	Endzustand ($t>t_f$):
+		\begin{equation*}
+			\boxed{ \ket{\psi(t)} = 
+			\sum_m c_m(t) e^{-i \omega_m (t-t_0)} \ket{m}
+			}
+		\end{equation*}
+	Übergangswahrscheinlichkeit von $\ket{n}$ in den Zustand $\ket{m}$:
+		\begin{equation*}
+			\boxed{P_{mn} (t) = |c_m(t)|^2}
+		\end{equation*}
+	Das gestörte System
+		\begin{equation*}
+			i \hbar \frac{\diff}{\diff t} \ket{\psi(t)}
+			= \left( H^0 + H^1(t) \right) \ket{\psi(t)}
+		\end{equation*}
+	wird im Allgemeinen nicht durch
+		\begin{equation*}
+			\ket{\psi(t)} = \text{T} e^{-\frac{i}{\hbar} H(t) (t-t_0)} \ket{\psi(t_0}
+		\end{equation*}
+	gestört! $H(t)$ ist zeitabhängig.
+	Aber 
+		\begin{align*}
+			\braket{\psi(t) | \psi(t)} &= \braket{\psi(t_0) | \psi(t_0)} \\
+			\Rightarrow \ket{\psi(t)} &= \U(t-t_0) \ket{\psi(t_0)}
+		\end{align*}
+	$\U(t,t_0)$ ist ein noch unbekannter unitärer Zeitentwicklungsoperator.\\
+	$\ket{\psi(t)}$ ist Wellenfunktion im Schrödingerbild.
+	
+	Betrachte:

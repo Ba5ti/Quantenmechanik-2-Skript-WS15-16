@@ -109,15 +109,15 @@
 		Der Hamiltonoperator erzeugt zeitliche Translationen:
 			\begin{align*}
 				\hat{H} \ket{\psi(t)} &= i\hbar \frac{\partial}{\partial t} \ket{\psi(t)}
-				\Rightarrow \ket{\psi(t)} = \hat{U}_t \ket{\psi(0)} \\
-				\text{mit~} U_{\hat{t}} &= \text{T} \exp \left( -\frac{i}{\hbar} \hat{H} t \right)
+				\Rightarrow \ket{\psi(t)} = \hat{\U}_t \ket{\psi(0)} \\
+				\text{mit~} \U_{\hat{t}} &= \text{T} \exp \left( -\frac{i}{\hbar} \hat{H} t \right)
 			\end{align*}
 		Wobei T ein Zeitoperator\footnote{Hier hat Prof. Bali kurz erklärt, wie T auf die Exponentialfunktion wirkt, aber ich konnte es bis jetzt nicht verstehen.} ist und $\hat{H}=H(\hat{x}, \hat{p})$ aber $[\hat{x}, \hat{p}] \neq 0$. 
 		Allgemein gilt $e^A e^B \neq e^{A+B}$ wenn $[A,B] \neq 0$.
 		
-		$\hat{U}_t$ ist unitär: 		
+		$\hat{\U}_t$ ist unitär: 		
 			\begin{equation}
-				\hat{U}_t + \hat{U}_t = \hat{U}_{-t} \hat{U}_t = \mathds{1}.
+				\hat{\U}_t + \hat{\U}_t = \hat{\U}_{-t} \hat{\U}_t = \mathds{1}.
 			\end{equation}
 		Mögliche Messergebnisse von $A$ zur Zeit $t$: $a_n$
 		Erwartungswert:	
@@ -129,7 +129,7 @@
 			\begin{align*}
 				c_n(t) &= \\
 				&= \braket{\psi(t) | n} \\
-				&= \braket{\psi(0) | \hat{U}_t^\dagger | n} \\
+				&= \braket{\psi(0) | \hat{\U}_t^\dagger | n} \\
 				&= \braket{\psi(0) | \text{T} e^{\frac{i}{\hbar} \hat{H} t} | n} \\
 				& \overset{\hat{H}\ket{m} = E_m \ket{m}}{=} 
 				\sum_m \braket{\psi(0) | \text{T} e^{ \frac{i}{\hbar} \hat{H} t} | m} \braket{m | n} \\
@@ -151,7 +151,7 @@
 	Damit 
 		\begin{align*} %H vor braket sieht nicht schön aus
 			&\braket{\psi'(t) | \hat{A} | \psi(t)} \equiv~_H\braket{\psi' | \hat{A}_H(t) | \psi}_H \\
-			&\Rightarrow \hat{A}_H(t) = \hat{U}_t^\dagger \hat{A} \hat{U}_t ~,~ \ket{\psi}_H = \ket{\psi(0)}
+			&\Rightarrow \hat{A}_H(t) = \hat{\U}_t^\dagger \hat{A} \hat{\U}_t ~,~ \ket{\psi}_H = \ket{\psi(0)}
 		\end{align*}	
 	Energie Eigenzustände:
 		\begin{align*}
@@ -161,15 +161,15 @@
 	$\Rightarrow \ket{n} = \ket{n}_H$ für \grqq stationäre \grqq Zustände.
 	
 	\underline{Ehrenfesttheorem:}
-		\begin{align}\nonumber
-			i \hbar \frac{\diff}{\diff t} \langle \hat{A} \rangle_\psi &= \\ \nonumber
-			&= i \hbar \frac{\diff}{\diff t} \Braket{\psi(t) | \hat{A} | \psi(t)} \\ \nonumber
-			&= i \hbar \left( \Braket{\dot{\psi} | \hat{A} | \psi} + \Braket{\psi | \hat{A} | \dot{\psi}} + \Braket{\psi | \dot{\hat{A}} | \psi} \right) \\ \nonumber
+		\begin{align*}
+			i \hbar \frac{\diff}{\diff t} \langle \hat{A} \rangle_\psi
+			&= i \hbar \frac{\diff}{\diff t} \Braket{\psi(t) | \hat{A} | \psi(t)} \\ 
+			&= i \hbar \left( \Braket{\dot{\psi} | \hat{A} | \psi} + \Braket{\psi | \hat{A} | \dot{\psi}} + \Braket{\psi | \dot{\hat{A}} | \psi} \right) \\ 
 			&= \left( \Braket{\psi | - \hat{H} \hat{A} | \psi} + \Braket{\psi | \hat{H} \hat{A} | \psi} + i\hbar \frac{\partial \erw{\hat{A}}}{\partial t} 
-			\right) \\ \nonumber
-			&= \Erw{\left[\hat{A} , \hat{H} \right]}_\psi + i\hbar \frac{\partial \erw{\hat{A}}}{\partial t} & \\ \nonumber
-			&~ &\Rightarrow \text{\fbox{$\frac{\diff}{\diff t} \erw{\hat{A}}_\psi = -\frac{i}{\hbar} \Erw{\left[ \hat{A} , \hat{B} \right]} + \frac{\partial}{\partial t} \erw{\hat{A}}$}} \\
-		\end{align}
+			\right) \\ 
+			&= \Erw{\left[\hat{A} , \hat{H} \right]}_\psi + i\hbar \frac{\partial \erw{\hat{A}}}{\partial t} 		\\
+			&\Rightarrow \boxed{\frac{\diff}{\diff t} \erw{\hat{A}}_\psi = -\frac{i}{\hbar} \Erw{\left[ \hat{A} , \hat{B} \right]} + \frac{\partial}{\partial t} \erw{\hat{A}}}	
+		\end{align*} %fänd schöner, wenn die mitte linkts zentriert wäre.
 	\underline{Beispiel:}
 		\begin{align*}
 			\hat{A} &= \hat{p} , \text{~mit~} \hat{p} = \frac{i}{\hbar} \frac{\partial}{\partial x} \text{~und~}
@@ -179,15 +179,15 @@
 		\end{align*}
 	\underline{Heisenberggleichung:}
 		\begin{align}
-			\text{\fbox{$ \frac{\diff \hat{A}_H(t)}{\diff t}
+			\boxed{\frac{\diff \hat{A}_H(t)}{\diff t}
 					= - \frac{i}{\hbar} \left[ \hat{A}_H , \hat{H}\right]
-					+ \frac{\partial \hat{A}_H}{\partial t}	$}}
+					+ \frac{\partial \hat{A}_H}{\partial t}	}
 		\end{align}
 	ist äquivalent zur \underline{Schrödingergleichung:}
 		\begin{equation}
-			\text{\fbox{$ \frac{\diff \ket{\psi(t)}}{\diff t} =
+			\boxed{\frac{\diff \ket{\psi(t)}}{\diff t} =
 					- \frac{i}{\hbar} \hat{H} \ket{\psi(t)}
-					$}}
+					}
 		\end{equation}
 	\subsection{Harmonischer Oszillator}
 		\begin{align*}

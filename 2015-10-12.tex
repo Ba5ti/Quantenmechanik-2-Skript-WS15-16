@@ -18,11 +18,11 @@
 				\frac{p^2}{2m} + V(x)
 			\end{equation*}
 		Poisson-Klammern:
-			\begin{equation}
+			\begin{equation*}
 				\{A,B\}=
 				\frac{\partial A}{\partial x} \frac{\partial B}{\partial p}
 				- \frac{\partial B}{\partial x} \frac{\partial A}{\partial p}
-			\end{equation}
+			\end{equation*}
 		Beispiele mit Spezialfällen:
 		\begin{tabbing}
 			\hspace{0.4\linewidth} \= \hspace{0.6\linewidth} \= \hfill \kill
@@ -37,12 +37,12 @@
 			Newton: $F= ma= \dot{p} = \text{\grqq} - \nabla V \text{\grqq} $	%keine ahnung wie ich das in anführugnszeichen setzten kann
 		\end{tabbing}
 		Fundamentale Poissonklammern:
-			\begin{equation}
+			\begin{align*}
 				\begin{split}
 					\{x,x\} &=\{p,p\}= 0 \\
 					\{x,p\} &= 1
 				\end{split}
-			\end{equation}
+			\end{align*}
 	\subsection{Quantenmechanik}
 		\^{A} ist Operator. Und $e$ hoch eine Matrix ist definiert als:
 			\begin{equation*}
@@ -116,9 +116,9 @@
 		Allgemein gilt $e^A e^B \neq e^{A+B}$ wenn $[A,B] \neq 0$.
 		
 		$\hat{\U}_t$ ist unitär: 		
-			\begin{equation}
+			\begin{equation*}
 				\hat{\U}_t + \hat{\U}_t = \hat{\U}_{-t} \hat{\U}_t = \mathds{1}.
-			\end{equation}
+			\end{equation*}
 		Mögliche Messergebnisse von $A$ zur Zeit $t$: $a_n$
 		Erwartungswert:	
 			\begin{align*}
@@ -178,17 +178,17 @@
 			- \frac{i}{\hbar} \Erw{\left[ \hat{p}, \hat{V}\right]} = - \Erw{\frac{\partial \hat{V}}{\partial x}} 
 		\end{align*}
 	\underline{Heisenberggleichung:}
-		\begin{align}
+		\begin{align*}
 			\boxed{\frac{\diff \hat{A}_H(t)}{\diff t}
 					= - \frac{i}{\hbar} \left[ \hat{A}_H , \hat{H}\right]
 					+ \frac{\partial \hat{A}_H}{\partial t}	}
-		\end{align}
+		\end{align*}
 	ist äquivalent zur \underline{Schrödingergleichung:}
-		\begin{equation}
+		\begin{equation*}
 			\boxed{\frac{\diff \ket{\psi(t)}}{\diff t} =
 					- \frac{i}{\hbar} \hat{H} \ket{\psi(t)}
 					}
-		\end{equation}
+		\end{equation*}
 	\subsection{Harmonischer Oszillator}
 		\begin{align*}
 			H &= \frac{p^2}{2m} + \frac{m}{2} \omega^2 x^2 

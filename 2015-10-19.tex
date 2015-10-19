@@ -67,5 +67,43 @@
 \subsection{Fermis Goldene Regel}
 	Betrachte zeitlich konstante Störung
 		\begin{align*}
-			H^1(t) &= \Theta (t) H^1
+			H^1(t) &= \underbrace{\Theta (t)}_{\substack{Heaviside}} H^1 \\
+		\end{align*}
+	$\Rightarrow$ für $m \neq n$, 1.Ordnung Störungstheorie:
+		\begin{align*}
+			P_{mn}(t) 
+			&= \frac{1}{\hbar^2} \left| \braket{m | H^1 | n}\right|^2 
+			\cdot \left| \int_{0}^{t} \diff t' e^{-i(\omega_m-\omega_n) t'} \right|^2 \\
+			&= \frac{4}{\hbar^2} \frac{\sin^2[(\omega_m-\omega_n)
+			\frac{t_0}{2}]}{(\omega_m-\omega_n)^2} 
+			\left| \braket{m | H^1 | n}\right|^2
+		\end{align*}
+	PLOT NUMMER 1
+		\begin{equation*}
+			\lim\limits_{t \rightarrow \infty} \frac{4 \sin^2(\frac{\omega}{2} t)}{\omega^2 t} = 2 \pi \delta (\omega)
+		\end{equation*}
+	Annahme $\ket{m} = \ket{\alpha}$ liegt im Kontinuierlichen Teil des Spektrums von $H^0$. Beispiel H-Atom mit
+		\begin{align*}
+			E_n &= - \frac{1}{2} \frac{m c^2 \alpha^2}{n^2} &
+			\ket{\alpha} \text{nicht normiert} \\
+			E_{\alpha 0} &\leq E_\alpha \leq E_{\alpha 1}
+		\end{align*}
+	EINE ZEICHNUNG
+%	\begin{figure*}
+%		\begin{center}
+%			\includegraphics{file}
+%		\end{center}
+%	\end{figure*}
+
+	$P_{\alpha n}(t)$ ist Übergangswahrscheinlichkeits\underline{dichte}
+	
+	Übergangswahrscheinlichkeit: 
+		\begin{equation*}
+			\int_{\alpha_0}^{\alpha_1} \diff \alpha P_{\alpha n} (t)
+		\end{equation*}
+	Übergangsrate (Übergangswahrscheinlichkeit pro Zeiteinheit)
+		\begin{align*}
+			\underbrace{W_{\alpha \leftarrow n}}_{
+				\mathclap{\text{Übergangsrate von~} n \text{~nach~} \alpha}}
+			&= \int \diff \alpha \frac{P_{an}(t)}{t}
 		\end{align*}

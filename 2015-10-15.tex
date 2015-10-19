@@ -1,4 +1,4 @@
-	wobei  \marginpar{15.10.2015}
+	wobei 
 		\begin{align*}
 			\text{Vernichtnungsoperator:~} a &= \frac{1}{\sqrt{2}} 
 			\left( y + i \tilde{p} \right) \\
@@ -15,10 +15,9 @@
 		\end{align*}
 	Sei nun:
 		\begin{align*}
-			\tilde{H} \ket{n} &= \epsilon_n \ket{n} 
-			&\left( H \ket{n} = E_n \ket{n} 
-			\Rightarrow E_n = \hbar \omega \epsilon_n \right) \\
-			a^\dagger a \ket{n} &= \left( \epsilon_n - \frac{1}{2} \right) \ket{n}
+			\tilde{H} \ket{n} &= \epsilon_n \ket{n} &\left( H \ket{n} = E_n \ket{n} 
+			\Rightarrow E_n = \hbar \omega \epsilon_n \right)
+			a^\dagger a \ket{n} = \left( \epsilon_n - \frac{1}{2} \right) \ket{n}
 		\end{align*}
 	(n ist Anzahl der Knoten (Nullstellen) der Wellenfunktionen.)
 	Aus QM 1:
@@ -27,15 +26,15 @@
 			a^\dagger \ket {n} &= \sqrt{n+1} \ket{n+1} \\
 			&\Rightarrow \epsilon_{n+1} = \epsilon_n + 1
 		\end{align*}
-	mit $n = 0, 1, 2 \ldots$: 
+	mit $n = 0, 1, 2 \ldots$: \footnote{\text{N: Nummernoperator (Teilchenzahloperator)}}
 		\begin{align*}
 			&\epsilon_n = n + \frac{1}{2} \leadsto E_n = \hbar \omega \left(n + \frac{1}{2} \right) \\
-			&\text{und~} 
-			\underbrace{a^\dagger a}_{\mathclap{N \text{: Nummernoperator(Teilchenzahloperator)}}}
+			&\text{und~} \underbrace{a^\dagger a}_{\substack{N}}
+			%\footnote{\text{Nummernoperator (Teilchenzahloperator)}}
 			\ket{n} = n \ket{n}
 		\end{align*} 
 	Somit ist $\tilde{H} = N + \frac{1}{2}$
-	
+
 \section{Zeitabhängige Störung}
 %\numberwithin{equation}{chapter}
 %\setcounter{equation}{1}
@@ -62,7 +61,7 @@
 		\end{equation*}			
 	Ist
 		\begin{equation*}
-			\Rightarrow \ket{\psi(t)} = \T e^{-\frac{i}{\hbar} H^0 (t-t_0)} 
+			\Rightarrow \ket{\psi(t)} = \text{T} e^{-\frac{i}{\hbar} H^0 (t-t_0)} 
 			\ket{\psi(t_0)} = \U^0(t-t_0) \ket{\psi(t_0)}
 		\end{equation*}
 	Achntung: T ist Zeit\textbf{ordnungs}operator und $\U^0(t-t_0)$ ist Zeit\textbf{entwicklungs}operator.
@@ -93,7 +92,7 @@
 		\end{equation*}
 	Übergangswahrscheinlichkeit von $\ket{n}$ in den Zustand $\ket{m}$:
 		\begin{equation*}
-			\boxed{P_{mn} (t) = |c_m(t)|^2} = \left| \braket{m | \psi_W(t)}\right|^2
+			\boxed{P_{mn} (t) = |c_m(t)|^2}
 		\end{equation*}
 	Das gestörte System
 		\begin{equation*}
@@ -102,7 +101,7 @@
 		\end{equation*}
 	wird im Allgemeinen nicht durch
 		\begin{equation*}
-			\ket{\psi(t)} = \T e^{-\frac{i}{\hbar} H(t) (t-t_0)} \ket{\psi(t_0}
+			\ket{\psi(t)} = \text{T} e^{-\frac{i}{\hbar} H(t) (t-t_0)} \ket{\psi(t_0}
 		\end{equation*}
 	gestört! $H(t)$ ist zeitabhängig.
 	Aber 
@@ -116,7 +115,7 @@
 	Betrachte:
 		\begin{equation*}
 			\ket{\psi_W(t)} = {(\U^0)}^{-1} (t-t_0) \ket{\psi(t)} 
-			= \T e^{\frac{i}{\hbar} H^0 (t-t_0)} \ket{\psi(t)} 
+			= \text{T} e^{\frac{i}{\hbar} H^0 (t-t_0)} \ket{\psi(t)} 
 		\end{equation*}
 	Für $H^1=0$ gilt:\footnote{hier ist wieder das Runtergeschriebene W für Wechselwirkung und H für Heisenberg.}
 		\begin{equation*}
@@ -125,12 +124,9 @@
 	Nun ist aber $H^1(t) \neq 0$
 		\begin{align}
 			i\hbar \frac{\diff}{\diff t} \ket{\psi_W(t)} &=
-			i\hbar \frac{\diff}{\diff t} \left[\T e^{\frac{i}{\hbar} H^0(t-t_0)} \ket{\psi(t)}\right] \nonumber \\ \nonumber
-			&= \T e^{\frac{i}{\hbar} H^0(t-t_0)} [ -H^0 + 
-			\underbrace{i\hbar \frac{\diff}{\diff t}] \ket{\psi(t)}}_{
-				\mathclap{H \ket{\psi(t)} = (H^0 + H^1(t)) \ket{\psi(t)}}
-				} \\ \nonumber
-			&= \T \left\{ e^{\frac{i}{\hbar} H^0(t-t_0)} H^1(t) e^{-\frac{i}{\hbar} H^0(t-t_0)} \ket{\psi_W(t)}\right\}  \\ 
+			i\hbar \frac{\diff}{\diff t} \left[\text{T} e^{\frac{i}{\hbar} H^0(t-t_0)} \ket{\psi(t)}\right] \nonumber \\ \nonumber
+			&= \text{T} e^{\frac{i}{\hbar} H^0(t-t_0)} [ -H^0 + \underbrace{i\hbar \frac{\diff}{\diff t}] \ket{\psi(t)}}_{\substack{*}} \\ \nonumber
+			&= \text{T} \left\{ e^{\frac{i}{\hbar} H^0(t-t_0)} H^1(t) e^{-\frac{i}{\hbar} H^0(t-t_0)} \ket{\psi_W(t)}\right\}  \\ 
 			\boxed{
 		\begin{aligned}i\hbar \frac{\diff}{\diff t} \ket{\psi_W(t)} 
 				&= H^1_W(t) \ket{\psi_W(t)}  \\ 
@@ -171,7 +167,7 @@
 			= \delta_{mn} - \frac{i}{\hbar} \sum_k \int_{t_0}^{t} \diff t' \braket{m | H^1(t') | k} e^{-i(\omega_n - \omega_m)(t'-t_0)} 
 			\underbrace{c_k(t_0)}_{\substack{\delta_{kn}}} + \ldots
 		\end{align*}
-	Setze $t_0=0 ~ (t_i>0)$
+	Setze $t_0=0 (t_i>0)$
 		\begin{equation*}
 			\Rightarrow \boxed{c_m(t) = \delta_{mn} 
 				- \frac{i}{\hbar} \int_{t_0}^{t} \diff t' \braket{m | H^1(t') | n} e^{-i(\omega_n - \omega_m) t'} + \ldots}
@@ -217,9 +213,9 @@
 			W^2(t,t_0) &= \mathds{1} 
 			- \frac{i}{\hbar} \int_{t_0}^{t} \diff t' H^1_W(t')
 			+ \left( -\frac{i}{\hbar}\right)^2 \int_{t_0}^{t} \diff t' \int_{t_0}^{t'} \diff t'' H^1_W(t') H^1_W(t'') \\
-			W^k(t,t_0) &= \mathds{1} 
-			+ \sum_{k=1}^{\infty} \left(-\frac{i}{\hbar}\right)^k 
-			\int_{t_0}^{t} \diff t_k
-			\int_{t_0}^{t_k} \diff t_{k-1} \cdots 
-			\int_{t_0}^{t_2} \diff t_1 H^1_W(t_k) H^1_W(t_{k-1}) \cdots H^1_W(t_1)
+			W^n(t,t_0) &= \mathds{1} 
+			+ \sum_{n=1}^{\infty} \left(-\frac{i}{\hbar}\right)^n 
+			\int_{t_0}^{t} \diff t_n
+			\int_{t_0}^{t_n} \diff t_{n-1} \cdots 
+			\int_{t_0}^{t_2} \diff t_1 H^1_W(t_n) H^1_W(t_{n-1}) \cdots H^1_W(t_1)
 		\end{align*}

@@ -1,0 +1,68 @@
+	Zeitordnungsoperator T : \marginpar{19.10.2015}
+		\begin{align*}
+		\T A(t_1) A(t_2) = 
+		\left\{
+			\begin{aligned}
+				A(t_1) A(t_2) &, t_1 \geq t_2 \\
+				A(t_2) A(t_1) &, t_1 \leq t_2 
+			\end{aligned}
+		\right.
+		\end{align*}
+		\begin{equation*}
+			\Rightarrow \T A(t_1) A(t_2) \cdots A(t_k) = A(t_{\pi(1)}) A(t_{\pi(2)}) \cdots A(t_{\pi(k)})
+		\end{equation*}
+	mit $\pi \in S_k$ (Gruppe der Permutationen von k Elementen (mit Mächtigkeit $k!$))
+	sodass wenn $t_{\pi(1)} \geq t_{\pi(2)} \geq \ldots \geq t_{\pi(k)}$
+		\begin{align*}
+			W(t) &= \T 
+			\left\{
+				\sum_{k=0}^\infty \left( \frac{-i}{\hbar}\right)^k \frac{1}{k!} 
+				\int_{0}^{t} \diff t_k \int_{0}^{t} \diff t_{k-1} \cdots
+				\int_{0}^{t} \diff t_1 
+				H_W^1(t_k) H_W^1(t_{k-1}) \cdots H_W^1(t_1) \mathds{1} 
+			\right\} \\
+			&= \T
+			\left\{\vphantom{\sum_{k=0}^{\infty}} \right.
+				\sum_{k=0}^{\infty} 
+				\left( \frac{-i}{\hbar}\right)^k \frac{1}{k!}
+				\underbrace{
+					\int_{0}^{t} \diff t_k H_W^1(t_k) 
+					\int_{0}^{t} \diff t_{k-1} H_W^1(t_{k-1}) \cdots
+					\int_{0}^{t} \diff t_1 H_W^1(t_1)
+				}_{\mathclap{\left( \int_{0}^{t} \diff t' H_W^1(t') \right)^k }}
+			\left. \vphantom{\sum_{k=0}^{\infty}}\right\} \\
+			% bemerkung: mit \vphantom sind die klammern jetzt nicht mehr so riesig.
+			&= \T \exp 
+			\left\{
+				- \frac{i}{\hbar} \int_{0}^{t} \diff t' H_W^1(t')
+			\right\}
+		\end{align*}
+	mit
+		\begin{align*}
+			i\hbar \frac{\diff}{\diff t} \ket{\psi_W(t)} &= H_W^1(t) \ket{\psi_W(0)} \\
+			\Rightarrow 
+			\ket{\psi_W(t)} &= \T e^{-\frac{i}{\hbar} \int_{0}^{t} \diff t' H_W^1(t')} \ket{\psi(0)}
+		\end{align*}
+	Hier kommt ein mathematischer Einschub oder sowas (what so ever):
+		\begin{align*}
+			\int_{0}^{t} \diff t' \int_{0}^{t'} \diff t'' f(t') f(t'') 
+			&= \int_{0}^{t} \diff t' 
+			\left( \vphantom{\int_{0}^{t'} \diff t''} \right.
+				\int_{0}^{t'} \diff t'' \underbrace{f(t')}_{\mathclap{t' > t''}} f(t'') 
+				+ \int_{t'}^{t} \diff t'' \underbrace{f(t'')}_{\mathclap{t'' > t'}} f(t')
+				\left. \vphantom{\int_{0}^{t'} \diff t''} 
+			\right) 
+			\frac{1}{2} \\
+			\int_{0}^{t} \diff t' \int_{t'}^{t} \diff t'' f(t'') f(t') 
+			&= \int_{0}^{t} \diff t'' \int_{0}^{t'} \diff t' f(t'') f(t') = \int_{0}^{t} \diff t' \int_{0}^{t'} \diff t'' f(t') f(t'') 
+		\end{align*}	
+	Die Übergangswahrscheinlichkeit vom Zustand $\ket{n}$ zur Zeit $t_0$ in den Zustand $\ket{m}$ zur Zeit $t>t_0$ lautet:
+		\begin{align*}
+			P_{mn} &= \left| c_m(t) \right|^2 \\
+			&= \left| \braket{m | \psi_W(t)} \right|^2 \\
+			&= \left| \braket{m | W(t,t_0) | \psi_W(t_0)} \right|^2 \\
+			&= \left| \braket{m | W(t,t_0) | n}\right|^2
+		\end{align*}
+	Hier ist wieder $\ket{n} = \ket{\psi(t_0)}$.
+	
+	\subsection{Fermis Goldene Regel}

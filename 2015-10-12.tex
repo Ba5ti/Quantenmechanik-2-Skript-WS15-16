@@ -1,5 +1,5 @@
 	
-\section{Quantenmechanik}
+\section{Quantenmechanik} \marginpar{12.10.2015}
 	\subsection{Mechanik}
 		Der einfachste Lagrange lautet 
 			\begin{equation*}
@@ -110,7 +110,7 @@
 			\begin{align*}
 				\hat{H} \ket{\psi(t)} &= i\hbar \frac{\partial}{\partial t} \ket{\psi(t)}
 				\Rightarrow \ket{\psi(t)} = \hat{\U}_t \ket{\psi(0)} \\
-				\text{mit~} \U_{\hat{t}} &= \text{T} \exp \left( -\frac{i}{\hbar} \hat{H} t \right)
+				\text{mit~} \U_{\hat{t}} &= \T \exp \left( -\frac{i}{\hbar} \hat{H} t \right)
 			\end{align*}
 		Wobei T ein Zeitoperator\footnote{Hier hat Prof. Bali kurz erklärt, wie T auf die Exponentialfunktion wirkt, aber ich konnte es bis jetzt nicht verstehen.} ist und $\hat{H}=H(\hat{x}, \hat{p})$ aber $[\hat{x}, \hat{p}] \neq 0$. 
 		Allgemein gilt $e^A e^B \neq e^{A+B}$ wenn $[A,B] \neq 0$.
@@ -130,9 +130,9 @@
 				c_n(t) &= \\
 				&= \braket{\psi(t) | n} \\
 				&= \braket{\psi(0) | \hat{\U}_t^\dagger | n} \\
-				&= \braket{\psi(0) | \text{T} e^{\frac{i}{\hbar} \hat{H} t} | n} \\
+				&= \braket{\psi(0) | \T e^{\frac{i}{\hbar} \hat{H} t} | n} \\
 				& \overset{\hat{H}\ket{m} = E_m \ket{m}}{=} 
-				\sum_m \braket{\psi(0) | \text{T} e^{ \frac{i}{\hbar} \hat{H} t} | m} \braket{m | n} \\
+				\sum_m \braket{\psi(0) | \T e^{ \frac{i}{\hbar} \hat{H} t} | m} \braket{m | n} \\
 				&= \sum_m \braket{\psi(0) | m} \braket{m | n} e^{ \frac{i}{\hbar} E_m t}
 			\end{align*}
 		So kann man auch schreiben:

@@ -79,6 +79,11 @@
 			\left| \braket{m | H^1 | n}\right|^2
 		\end{align*}
 	PLOT NUMMER 1
+	\begin{figure*} [h]
+		\begin{center}
+			\includegraphics[width=10cm]{Ersatzgraph1.jpg}
+		\end{center}
+	\end{figure*}
 		\begin{equation*}
 			\lim\limits_{t \rightarrow \infty} \frac{4 \sin^2(\frac{\omega}{2} t)}{\omega^2 t} = 2 \pi \delta (\omega)
 		\end{equation*}
@@ -89,11 +94,11 @@
 			E_{\alpha 0} &\leq E_\alpha \leq E_{\alpha 1}
 		\end{align*}
 	EINE ZEICHNUNG
-%	\begin{figure*}
-%		\begin{center}
-%			\includegraphics{file}
-%		\end{center}
-%	\end{figure*}
+	\begin{figure*} [h]
+		\begin{center}
+			\includegraphics[width=10cm]{Ersatzgraph2.jpg}
+		\end{center}
+	\end{figure*}
 
 	$P_{\alpha n}(t)$ ist Übergangswahrscheinlichkeits\underline{dichte}
 	
@@ -139,3 +144,48 @@
 		\end{itemize}
 		
 \subsection{Periodische Störungen}
+		\begin{align*}
+			H^1(t) &= \left[H_\omega e^{-i \omega t} + H^\dagger_\omega e^{i \omega t}\right]
+			\Theta(t) ,& \omega &> 0 \\
+			H^{1 \dagger}(t) &= H^1(t) &\Rightarrow H^1(t) &= 0 \text{~für~} t < 0 
+		\end{align*}
+		\begin{align*}	
+			c_m(t) - \delta_{mn} &= - \frac{i}{\hbar} \int_{0}^{t'} \diff t'
+			\left\{ \braket{m | H_\omega | n} e^{i (\omega_m - \omega_n - \omega) t'} +
+			\braket{m | H_\omega^\dagger | n} e^{i (\omega_m - \omega_n + \omega) t'}
+			\right\} + \ldots \\
+			\marginnote{Zitat Balis: jetzt bekommen wir hier viele Sinüsse. XD}
+			&= - \frac{i}{\hbar} 
+			\left\{ \braket{m | H_\omega | n} 
+				\frac{\sin \left[\frac{1}{2} (\omega_m - \omega_n + \omega) t 
+					\right]}{\frac{1}{2} (\omega_m - \omega_n + \omega)}
+				e^{\frac{i}{2} (\omega_m - \omega_n - \omega) t} ~+ \right. \\
+			&+ \left. \braket{m | H_\omega^\dagger | n}
+				\frac{\sin \left[\frac{1}{2} (\omega_m - \omega_n - \omega) t 
+					\right]}{\frac{1}{2} (\omega_m - \omega_n - \omega)}
+				e^{\frac{i}{2} (\omega_m - \omega_n + \omega) t}	
+			\right\} \\
+			\Rightarrow \left|c_m(t) - \delta_{mn}\right|^2 
+			&= \frac{1}{\hbar^2} 
+			\left\{ \left|\braket{m | H_\omega | n}\right|^2
+				\frac{4 \sin^2 \left( \frac{1}{2} \left( \omega_{mn} - \omega\right) t
+				\right)}{(\omega_{mn} - \omega)^2} ~+ \right. \\
+			&+ \left. \left|\braket{m | H^\dagger_\omega | n}\right|^2
+			\frac{4 \sin^2 \left( \frac{1}{2} \left( \omega_{mn} + \omega\right) t
+				\right)}{(\omega_{mn} + \omega)^2}
+			+ \text{gemischte Terme}
+			\right\}
+		\end{align*}
+	mit $\omega_{mn} = \omega_m - \omega_n$
+	
+	HIER GRAPH EINFÜGEN
+	\begin{figure*} [h]
+		\begin{center}
+			\includegraphics[width=10cm]{Ersatzgraph3.jpg}
+		\end{center}
+	\end{figure*}
+	
+		\begin{align*}
+			\omega_m &= \omega_n + \omega &\Rightarrow E_m &= E_n + \hbar \omega: \text{Absorption} \\
+			\omega_m &= \omega_n - \omega &\Rightarrow E_m &= E_n - \hbar \omega: \text{Emission}
+		\end{align*}

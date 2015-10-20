@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2014.9.8)  20 OCT 2015 11:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2014.9.8)  20 OCT 2015 13:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -516,6 +516,18 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 ))
 \Gin@req@height=\dimen129
 \Gin@req@width=\dimen130
+)
+(c:/texlive/2014/texmf-dist/tex/latex/marginnote/marginnote.sty
+Package: marginnote 2012/03/29 v1.1i non floating margin notes for LaTeX
+\c@mn@abspage=\count107
+)
+(c:/texlive/2014/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count108
+\float@exts=\toks24
+\float@box=\box29
+\@float@everytoks=\toks25
+\@floatcapt=\box30
 )) (./main.aux
 (./2015-10-12.aux) (./2015-10-15.aux) (./2015-10-19.aux))
 \openout1 = `main.aux'.
@@ -539,17 +551,17 @@ File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 (c:/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count107
+\scratchcounter=\count109
 \scratchdimen=\dimen131
-\scratchbox=\box29
-\nofMPsegments=\count108
-\nofMParguments=\count109
-\everyMPshowfont=\toks24
-\MPscratchCnt=\count110
+\scratchbox=\box31
+\nofMPsegments=\count110
+\nofMParguments=\count111
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count112
 \MPscratchDim=\dimen132
-\MPnumerator=\count111
-\makeMPintoPDFobject=\count112
-\everyMPtoPDFconversion=\toks25
+\MPnumerator=\count113
+\makeMPintoPDFobject=\count114
+\everyMPtoPDFconversion=\toks27
 ) (c:/texlive/2014/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -598,6 +610,8 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
+Package marginnote Info: \pdfoutput not 0 and \pdflastxpos available.
+(marginnote)             Extended position detection mode activated.
 LaTeX Font Info:    Try loading font information for T1+lmss on input line 5.
 
 (c:/texlive/2014/texmf-dist/tex/latex/lm/t1lmss.fd
@@ -703,50 +717,91 @@ Overfull \hbox (52.9936pt too wide) in paragraph at lines 169--169
  (./2015-10-19.tex [10
 
 
-] [11]
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 131.
+]
+<Ersatzgraph1.jpg, id=57, 3276.24pt x 2457.18pt>
+File: Ersatzgraph1.jpg Graphic file (type jpg)
+ <use Ersatzgraph1.jpg>
+Package pdftex.def Info: Ersatzgraph1.jpg used on input line 84.
+(pdftex.def)             Requested size: 284.52756pt x 213.3755pt.
+
+<Ersatzgraph2.jpg, id=58, 3276.24pt x 2457.18pt>
+File: Ersatzgraph2.jpg Graphic file (type jpg)
+ <use Ersatzgraph2.jpg>
+Package pdftex.def Info: Ersatzgraph2.jpg used on input line 99.
+(pdftex.def)             Requested size: 284.52756pt x 213.3755pt.
 
 
-(c:/texlive/2014/texmf-dist/tex/latex/lm/omslmr.fd
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[11 <./Ersatzgraph1.jpg>]
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 136.
+
+ (c:/texlive/2014/texmf-dist/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 131.
-) [12] (./main.aux
-(./2015-10-12.aux) (./2015-10-15.aux) (./2015-10-19.aux)) ) 
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 136.
+
+[12 <./Ersatzgraph2.jpg>]
+Package marginnote Info: right page because not two side mode on input line 178
+.
+Package marginnote Info: xpos not known,
+(marginnote)             using \marginnoterightadjust on input line 178.
+Package marginnote Info: Margin note 13.2 is on absolute page 13
+(marginnote)              on input line 178.
+Package marginnote Info: right page because not two side mode on input line 178
+.
+Package marginnote Info: xpos seems to be 171.10556pt,
+(marginnote)             \marginnoterightadjust ignored on input line 178.
+
+Overfull \hbox (2.51324pt too wide) in paragraph at lines 178--178
+[] 
+ []
+
+<Ersatzgraph3.jpg, id=65, 3276.24pt x 2457.18pt>
+File: Ersatzgraph3.jpg Graphic file (type jpg)
+ <use Ersatzgraph3.jpg>
+Package pdftex.def Info: Ersatzgraph3.jpg used on input line 184.
+(pdftex.def)             Requested size: 284.52756pt x 213.3755pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [13] [14 <./Ersatzgraph3.jpg>] (./main.aux (./2015-10-12.aux)
+(./2015-10-15.aux) (./2015-10-19.aux)) ) 
 Here is how much of TeX's memory you used:
- 5329 strings out of 493117
- 78478 string characters out of 6138985
- 196678 words of memory out of 5000000
- 8616 multiletter control sequences out of 15000+600000
+ 5452 strings out of 493117
+ 80421 string characters out of 6138985
+ 199878 words of memory out of 5000000
+ 8727 multiletter control sequences out of 15000+600000
  52317 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 46i,18n,42p,360b,252s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/texlive/2014/tex
-mf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{c:/texlive/2014/texmf-dist/fonts/enc/
-dvips/lm/lm-ec.enc}{c:/texlive/2014/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:
-/texlive/2014/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2014/texm
-f-dist/fonts/enc/dvips/lm/lm-mathex.enc}<c:/texlive/2014/texmf-dist/fonts/type1
-/public/doublestroke/dsrom10.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public
-/doublestroke/dsrom8.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public/lm/lmbx
-10.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/texlive
-/2014/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/texlive/2014/texmf-dist/f
-onts/type1/public/lm/lmmi6.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public/l
-m/lmmi8.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public/lm/lmmi9.pfb><c:/tex
-live/2014/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2014/texmf-dis
-t/fonts/type1/public/lm/lmr6.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public
-/lm/lmr8.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public/lm/lmr9.pfb><c:/tex
-live/2014/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb><c:/texlive/2014/texmf-
-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2014/texmf-dist/fonts/type1/p
-ublic/lm/lmsy6.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
-<c:/texlive/2014/texmf-dist/fonts/type1/public/lm/lmsy9.pfb><c:/texlive/2014/te
-xmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2014/texmf-
-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2014/texmf-dist
-/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on main.pdf (12 pages, 264649 bytes).
+ 47i,18n,42p,360b,281s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/texlive/2014/texmf-dist/fonts/enc/d
+vips/lm/lm-mathsy.enc}{c:/texlive/2014/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}
+{c:/texlive/2014/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/texlive/2014/texmf
+-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2014/texmf-dist/fonts/enc/dv
+ips/lm/lm-mathex.enc}<c:/texlive/2014/texmf-dist/fonts/type1/public/doublestrok
+e/dsrom10.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public/doublestroke/dsrom
+8.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/texlive/
+2014/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/texlive/2014/texmf-dist/fo
+nts/type1/public/lm/lmmi10.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public/l
+m/lmmi6.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/tex
+live/2014/texmf-dist/fonts/type1/public/lm/lmmi9.pfb><c:/texlive/2014/texmf-dis
+t/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2014/texmf-dist/fonts/type1/publi
+c/lm/lmr6.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/te
+xlive/2014/texmf-dist/fonts/type1/public/lm/lmr9.pfb><c:/texlive/2014/texmf-dis
+t/fonts/type1/public/lm/lmssbx10.pfb><c:/texlive/2014/texmf-dist/fonts/type1/pu
+blic/lm/lmsy10.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public/lm/lmsy6.pfb>
+<c:/texlive/2014/texmf-dist/fonts/type1/public/lm/lmsy8.pfb><c:/texlive/2014/te
+xmf-dist/fonts/type1/public/lm/lmsy9.pfb><c:/texlive/2014/texmf-dist/fonts/type
+1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2014/texmf-dist/fonts/type1/pu
+blic/amsfonts/symbols/msbm10.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public
+/amsfonts/symbols/msbm7.pfb>
+Output written on main.pdf (14 pages, 7097513 bytes).
 PDF statistics:
- 134 PDF objects out of 1000 (max. 8388607)
- 99 compressed objects within 1 object stream
+ 145 PDF objects out of 1000 (max. 8388607)
+ 104 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

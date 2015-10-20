@@ -105,5 +105,37 @@
 		\begin{align*}
 			\underbrace{W_{\alpha \leftarrow n}}_{
 				\mathclap{\text{Übergangsrate von~} n \text{~nach~} \alpha}}
-			&= \int \diff \alpha \frac{P_{an}(t)}{t}
+			&= \int \diff \alpha \frac{P_{an}(t)}{t} \\
+			&\underset{t \rightarrow \infty}{=} 
+			\int \diff \alpha \frac{2 \pi}{\hbar^2} 
+			\delta(\omega_\alpha - \omega_n) \left| \braket{m | H^1 | n}\right|^2 \\
+			&= \int \diff \alpha \frac{2 \pi}{\hbar} 
+			\delta (E_\alpha - E_n) \left| \braket{\alpha | H^1 | n}\right|^2
 		\end{align*}
+	(hier meinte Herr Prof. Bali mit einem Pfeil auf $E_\alpha$: Zeitunabhängige Störung erzwingt Energieerhaltung)
+	
+	Dichte von Zuständen:
+		\begin{align*}
+			\rho &= \int \diff \alpha \delta (E_\alpha - E)  \\
+			\diff \alpha &= \rho(E_\alpha) \diff E_\alpha: \text{~Zahl der Zustände im ``Ìntervall''~} \diff E_\alpha
+		\end{align*}
+		\begin{align*}
+			\boxed{
+				W_{\alpha \leftarrow n} = \frac{2 \pi}{\hbar} \rho(E_n)
+					\left| \braket{\alpha | H^1 | n}\right|^2
+				}
+			\text{~Fermis ``Goldene Regel'' (Wenzel)}
+		\end{align*}
+	Probleme bei 
+		\begin{itemize}
+			\item $t$ sehr groß $\Rightarrow \int \diff \alpha P_{\alpha n} > 1$.
+			\item $t  << \frac{1}{|\omega_\alpha - \omega_n|}$ (keine $\delta$- Funktion)   
+		\end{itemize}	
+	Gültigkeitsbereich:
+		\begin{itemize}
+			\item $\Delta E$ Verteilung der Endzustände muss größer sein als die Breite von $\frac{\sin^2 (\frac{1}{2}(\omega_\alpha - \omega_n) t)}{(\omega_\alpha - \omega_n)^2}$. Damit $\delta$- Funktionsapproximation gerechtfertigt ist, muss $t \gg \frac{2 \alpha \pi}{\Delta E}$ (Version der Unschärferelation)
+			\item $t$ muss klein genug sein, damit 1.Ordnung Störungstheorie gerechtfertigt ist:
+			\\ $t \ll \frac{1}{W_{\alpha \leftarrow n}}$
+		\end{itemize}
+		
+\subsection{Periodische Störungen}

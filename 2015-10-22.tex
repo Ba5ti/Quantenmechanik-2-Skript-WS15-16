@@ -111,7 +111,134 @@
 	Wir wollen nun $W_{m \leftarrow n}$ ausrechnen:
 		\begin{align*}
 			\left|\braket{m | \frac{e}{m c} A_0 e^{i \vec{k} \vec{r}} \vec{\epsilon}~\vec{p} |n}\right|^2
-			= \frac{e^2}{m^2 c^2} |A_0|^2 \left| \braket{m | e^{i \vec{k} \vec{p}} \vec{\epsilon}~\vec{p} | n}\right|^2
+			= \frac{e^2}{m^2 c^2} |A_0|^2 \left| \braket{m | e^{i \vec{k} \vec{r}} \vec{\epsilon}~\vec{p} | n}\right|^2
 		\end{align*}
+	Übergangsrate: Absorption: $\omega_m > \omega_n$, $\omega_m = \omega_n + \omega$
+		\begin{equation*}
+			W_{m \leftarrow n} = 
+			\frac{1}{t \hbar} \int \limits_{-\infty}^{\infty} 
+			\diff E \rho_\omega (\omega) P_{nm} (t)
+		\end{equation*}
+	Wir machen $t$ groß $\Rightarrow$ Fermiregeln
+		\begin{align*}
+			\frac{2 \pi}{\hbar} \left|\braket{m | H_\omega | n}\right|^2 &\rho_\omega (\omega) \\
+			&\rho_\omega (\omega) \text{~ist Dichte im Zustand mit~} \omega = \frac{E}{\hbar} \\
+			&\text{und~ }\rho_\omega (\omega)\sim \delta (\omega + \omega_{mn})
+		\end{align*}
+		\begin{align*}
+			W_{m \leftarrow n} &= 
+			\frac{4 \pi e^2}{m^2 \hbar^2 \omega_{mn}^2} u(\omega_{mn}) 
+			\left|\braket{m | e^{i \vec{k} \vec{r}} (\vec{\epsilon} \cdot \vec{p}) | n}\right|^2 \\
+			\erw{\hat{p}} &= \frac{i m}{\hbar} \left[H^0 , \vec{r} \right] 
+		\end{align*}
+		\begin{align*}
+			\text{mit~}\alpha = \frac{e^2}{4 \pi \hbar c} :
+			\boxed{W_{m \leftarrow n} = \frac{16 \pi^2 \alpha c}{\hbar^3 \omega_{mn}^2} 
+				u (\omega_{mn}) \left|\braket{m | e^{i \vec{k} \vec{r}} \left[H^0 , \vec{r} \cdot \vec{\epsilon}\right] | n}\right|^2
+			}
+		\end{align*}
+	Dipolnäherung: 
+		\begin{equation*}
+			e^{i \vec{k} \vec{r}} = 1 + 
+			\underbrace{(i \vec{k} \vec{r})}_{\substack{\mathcal{O}(\alpha)}}
+		\end{equation*}
+	Der $\mathcal{O}(\alpha)$ Term kann vernachlässigt werden, denn:
+		\begin{align*}
+			\vec{k} \cdot \vec{r} 
+			&\sim \frac{\omega}{c} n^2 a_B
+			\sim \frac{\alpha \hbar c}{2 n^2 a_B} \frac{n^2 a_B}{\hbar c}
+			\sim \frac{\alpha}{2} \\
+			\alpha &\approx \frac{1}{137} \\
+			n &: \text{Hauptquantenzahl} \\	
+			a_B &: \text{Bohrscher Radius}		
+		\end{align*}
+	Jetzt wollen wir wissen was $\braket{m | \left[H^0 , \vec{r}\right] | n}$ ist
+		\begin{align*}
+			\vec{\epsilon} \braket{m | \left[H^0 , \vec{r}\right] | n} 
+			= \hbar \overbrace{(\omega_m - \omega_n)}^{\mathclap{\omega_{mn}}} \vec{\epsilon} \braket{m | \vec{r} | n}
+		\end{align*}
+	Nebenbemerkung 
+		\begin{align*}
+			\bra{m} H^0 &= \bra{m} \hbar \omega_m \\
+			-H \ket{n} &= -\hbar \omega_n \ket{n}
+		\end{align*}
+		\begin{empheq}[box=\boxed]{align*}
+			\text{In Dipolnäherung:} \\
+					W_{m \rightarrow n} &= \frac{16 \pi^2 \alpha c}{\hbar} u(\omega_{mn}) 
+					\left|\braket{m | \vec{\epsilon} \cdot \vec{r} | n}\right|^2\\
+					&= \frac{4 \pi}{\hbar^2} u(\omega_{mn}) 
+					\left|\braket{m | \vec{\epsilon} \cdot \vec{d}}\right|^2\\
+					&\text{mit Dipoloperator:~} \vec{d} = e \vec{r} = \sqrt{4 \pi \hbar c \alpha} \cdot \vec{r}
+		\end{empheq}
+		\begin{equation*}
+			\braket{\vec{r} | n \ell m} = \psi_{n \ell m} (\vec{r}) 
+			= \frac{u_{n \ell}(r)}{r} Y_{\ell m} (\Theta, \phi)
+		\end{equation*}
+	\underline{Dipolauswahlregeln:}
+		\begin{align*}
+			\braket{n' \ell' m' | \vec{r} | n \ell m} &\neq 0 \\
+			&\Rightarrow \int \diff \Omega~Y^*_{\ell' m'}(\Omega)~\vec{r}~Y_{\ell m} (\Omega) \neq 0 \\
+			\vec{r} &= \sqrt{\frac{4 \pi}{3}} r 
+			\left( \vphantom{-\frac{1}{\sqrt{2}}} \right. -\frac{1}{\sqrt{2}} 
+				\underbrace{(Y_{1,1} + Y_{1,-1})}_{\mathclap{\sin \Theta \cos \phi}},
+				\frac{1}{\sqrt{2}} \underbrace{(Y_{1,1} - Y_{1,-1})}_{\mathclap{\sin \Theta \sin \phi}},
+				Y_{1,0}
+			\left. \vphantom{-\frac{1}{\sqrt{2}}} \right) \\
+			&= r \sum_{i,\lambda} \vec{e}_i d_{i,\lambda} Y_{1,\lambda} \\
+			&\text{wobei~} i = \{x,y,z\} \text{~und~} \lambda \in \{-1,0,1\} 
+		\end{align*}
+		\begin{equation*}
+			Y_{1,\lambda} Y_{\ell m} = c_- Y_{\ell - 1, m + \lambda}
+			+ c_0 Y_{\ell, m+\lambda} + c_+ Y_{\ell + 1, m + \lambda}
+		\end{equation*}
+	mit $c_-,c_0, c_+$ Clebsch-Gordon Koeffizienten.
 	
+	Wir führen $m' = m + \lambda$ ein, weil 
+		\begin{equation*}
+			\int \diff \Omega ~Y^*_{\ell', m'} Y_{L, m+\lambda} = \delta_{\ell, L} \delta_{m', m+\lambda}
+		\end{equation*}
+		\begin{equation*}
+			\Rightarrow \boxed{\Delta m = m' - m = 0, \pm 1}
+		\end{equation*}
+	Paritätsoperator:
+		\begin{align*}
+			\mathds{P} \vec{r} &= -\vec{r} & &\mathds{P} Y_{\ell m}(\Theta, \phi) = (-)^\ell Y_{\ell m}(\Theta, \phi) \\
+%		\end{align*}
+%		\begin{align*}
+			&\int \diff \Omega~Y_{\ell' m'}(\Omega)~\vec{r}~Y_{\ell m} (\Omega) =
+			& &\text{analog zu:} \\ 
+			&= \int \diff \Omega ~\mathds{P} \left(~Y^*_{\ell' m'}(\Omega)
+			~\vec{r}~Y_{\ell m}(\Omega)\right)& 
+			&\int\limits_{-\infty}^{\infty} \diff x f(x) 
+			= \int\limits_{-\infty}^{\infty} \diff x f(-x) \\
+			&= \int \diff \omega (-)^{\ell'} (-1) (-)^\ell
+			\left( Y_{\ell'm'}(\Omega) ~\vec{r}~ Y_{\ell m}(\Omega)\right) \\
+			&= (-)^{\ell + \ell' + 1} \int \diff \Omega ~Y_{\ell' m'}(\Omega)~\vec{r}~Y_{\ell m} (\Omega)
+		\end{align*}
+	Integral $\neq 0 \Rightarrow 1= (-)^{\ell + \ell' + 1} \Rightarrow \ell + \ell'$ ungerade \\
+	Und dies gilt nur für $\ell' = \ell, \ell+1, \ell-1$
+		\begin{empheq}[box=\boxed]{align*}
+			\Rightarrow
+			\Delta \ell = \ell' + \ell &= \pm 1 &\text{für~} \ell &\geq 1 \\
+			&= 1 &\text{für~} \ell &= 0
+		\end{empheq}
+	$\Delta m = 0$ tritt nur für $\braket{\ell' , m' | z | \ell, m}$ auf \marginpar{was zur Hölle ist z?}
 	
+	Betrachte inkohärente Überlagerung von elektromagnetischen Wellen (keine Polarisation):\marginpar{warum $1/3$ wird nächste Stunde genauer gezeigt}
+		\begin{align*}
+			\frac{1}{4 \pi} \int 
+			\underbrace{\diff \Omega_{\vec{\epsilon}}}_{\mathclap{\text{Mittel über alle~} \vec{\epsilon}}} 
+			\left|\braket{m | \vec{d} \cdot \vec{\epsilon} | n}\right|^2 
+			&= \frac{1}{4 \pi} \int \diff \Omega_{\vec{\epsilon}} 
+			\braket{m | \vec{d} \cdot \vec{\epsilon} | n} \braket{n | \vec{d} \cdot \vec{\epsilon} | m} \\
+			&= \sum_{i,j} \braket{m | d_i | n} \braket{n | d_j | m} 
+			\frac{1}{4 \pi} \int \diff \Omega_{\vec{\epsilon}} 
+			\overbrace{\epsilon_i \epsilon_j}^{\mathclap{\delta_{ij}\frac{\epsilon^2}{3}}} \\
+			&= \frac{4 \pi}{3} \left|\braket{m | \vec{d} | n}\right|^2
+		\end{align*} 
+		\begin{empheq}[box=\boxed]{align*}
+			W_{m \leftarrow n} &= 
+			\frac{4 \pi}{3 \hbar^2} u (\omega_{mn}) 
+			\left| \braket{n | \vec{d} | m}\right|^2 
+			&\text{mit~} \vec{d} &= e \vec{r} \text{~Dipolmoment}
+		\end{empheq}

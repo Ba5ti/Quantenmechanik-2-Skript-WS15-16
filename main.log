@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2014.9.8)  22 OCT 2015 14:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2014.9.8)  22 OCT 2015 16:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -528,6 +528,27 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \float@box=\box29
 \@float@everytoks=\toks25
 \@floatcapt=\box30
+)
+(c:/texlive/2014/texmf-dist/tex/latex/mathtools/empheq.sty
+Package: empheq 2014/07/16 v2.14 Emphasizing equations
+\l_EQ_equationtype_int=\count109
+\l_EQ_alignmentmode_int=\count110
+\l_EQ_totalwidth_dim=\dimen131
+\l_EQ_displaywidth_dim=\dimen132
+\l_EQ_temp_linewidth_dim=\dimen133
+\EmphEqdelimitershortfall=\dimen134
+\EmphEqdelimiterfactor=\count111
+\g_EQ_toptag_height_dim=\dimen135
+\g_EQ_bottomtag_depth_dim=\dimen136
+\g_EQ_toprow_height_dim=\dimen137
+\g_EQ_bottomrow_depth_dim=\dimen138
+\g_EQ_widesttag_dim=\dimen139
+\EQ_mathdisplay_box=\box31
+\EQ_tag_box=\box32
+\g_EQ_temprow_int=\count112
+)
+(c:/texlive/2014/texmf-dist/tex/latex/placeins/placeins.sty
+Package: placeins 2005/04/18  v 2.2
 )) (./main.aux
 (./2015-10-12.aux) (./2015-10-15.aux) (./2015-10-19.aux) (./2015-10-22.aux))
 \openout1 = `main.aux'.
@@ -551,16 +572,16 @@ File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 (c:/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count109
-\scratchdimen=\dimen131
-\scratchbox=\box31
-\nofMPsegments=\count110
-\nofMParguments=\count111
+\scratchcounter=\count113
+\scratchdimen=\dimen140
+\scratchbox=\box33
+\nofMPsegments=\count114
+\nofMParguments=\count115
 \everyMPshowfont=\toks26
-\MPscratchCnt=\count112
-\MPscratchDim=\dimen132
-\MPnumerator=\count113
-\makeMPintoPDFobject=\count114
+\MPscratchCnt=\count116
+\MPscratchDim=\dimen141
+\MPnumerator=\count117
+\makeMPintoPDFobject=\count118
 \everyMPtoPDFconversion=\toks27
 ) (c:/texlive/2014/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
@@ -612,6 +633,7 @@ e
 ))
 Package marginnote Info: \pdfoutput not 0 and \pdflastxpos available.
 (marginnote)             Extended position detection mode activated.
+\Hy@linkcounter=\count119
 LaTeX Font Info:    Try loading font information for T1+lmss on input line 5.
 
 (c:/texlive/2014/texmf-dist/tex/latex/lm/t1lmss.fd
@@ -743,28 +765,23 @@ LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 136.
 
 [12 <./Ersatzgraph2.jpg>]
-Package marginnote Info: right page because not two side mode on input line 178
+Package marginnote Info: right page because not two side mode on input line 168
 .
 Package marginnote Info: xpos not known,
-(marginnote)             using \marginnoterightadjust on input line 178.
+(marginnote)             using \marginnoterightadjust on input line 168.
 Package marginnote Info: Margin note 13.2 is on absolute page 13
-(marginnote)              on input line 178.
-Package marginnote Info: right page because not two side mode on input line 178
+(marginnote)              on input line 168.
+Package marginnote Info: right page because not two side mode on input line 168
 .
-Package marginnote Info: xpos seems to be 171.10556pt,
-(marginnote)             \marginnoterightadjust ignored on input line 178.
-
-Overfull \hbox (2.51324pt too wide) in paragraph at lines 178--178
-[] 
- []
-
-<Ersatzgraph3.jpg, id=65, 3276.24pt x 2457.18pt>
+Package marginnote Info: xpos seems to be 157.43645pt,
+(marginnote)             \marginnoterightadjust ignored on input line 168.
+ <Ersatzgraph3.jpg, id=65, 3276.24pt x 2457.18pt>
 File: Ersatzgraph3.jpg Graphic file (type jpg)
- <use Ersatzgraph3.jpg>
-Package pdftex.def Info: Ersatzgraph3.jpg used on input line 183.
+
+<use Ersatzgraph3.jpg>
+Package pdftex.def Info: Ersatzgraph3.jpg used on input line 185.
 (pdftex.def)             Requested size: 284.52756pt x 213.3755pt.
-)
-[13] [14 <./Ersatzgraph3.jpg>]
+ [13]) [14 <./Ersatzgraph3.jpg>]
 \openout2 = `2015-10-22.aux'.
 
  (./2015-10-22.tex
@@ -795,41 +812,65 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--27
 [15
 
 
-] [16]) [17] (./main.aux (./2015-10-12.aux) (./2015-10-15.aux)
-(./2015-10-19.aux) (./2015-10-22.aux)) ) 
+] [16] [17] [18]
+Underfull \hbox (badness 5878) in paragraph at lines 227--227
+[]\T1/lmr/m/n/10.95 warum $\OT1/lmr/m/n/10.95 1\OML/lmm/m/it/10.95 =\OT1/lmr/m/
+n/10.95 3$
+ []
+
+
+Underfull \hbox (badness 1603) in paragraph at lines 227--227
+\T1/lmr/m/n/10.95 wird nächs-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 227--227
+\T1/lmr/m/n/10.95 te Stun-de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 227--227
+\T1/lmr/m/n/10.95 ge-nau-er
+ []
+
+
+LaTeX Warning: Marginpar on page 19 moved.
+
+) [19] (./main.aux (./2015-10-12.aux) (./2015-10-15.aux) (./2015-10-19.aux)
+(./2015-10-22.aux)) ) 
 Here is how much of TeX's memory you used:
- 5463 strings out of 493117
- 80598 string characters out of 6138985
- 200170 words of memory out of 5000000
- 8731 multiletter control sequences out of 15000+600000
+ 5742 strings out of 493117
+ 85851 string characters out of 6138985
+ 208315 words of memory out of 5000000
+ 9003 multiletter control sequences out of 15000+600000
  52317 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 47i,18n,42p,360b,281s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/texlive/2014/texmf-dist/fonts/enc/d
-vips/lm/lm-mathsy.enc}{c:/texlive/2014/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}
-{c:/texlive/2014/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/texlive/2014/texmf
--dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2014/texmf-dist/fonts/enc/dv
-ips/lm/lm-mathex.enc}<c:/texlive/2014/texmf-dist/fonts/type1/public/doublestrok
-e/dsrom10.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public/doublestroke/dsrom
-8.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/texlive/
-2014/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/texlive/2014/texmf-dist/fo
-nts/type1/public/lm/lmmi10.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public/l
-m/lmmi6.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/tex
-live/2014/texmf-dist/fonts/type1/public/lm/lmmi9.pfb><c:/texlive/2014/texmf-dis
-t/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2014/texmf-dist/fonts/type1/publi
-c/lm/lmr6.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/te
-xlive/2014/texmf-dist/fonts/type1/public/lm/lmr9.pfb><c:/texlive/2014/texmf-dis
-t/fonts/type1/public/lm/lmssbx10.pfb><c:/texlive/2014/texmf-dist/fonts/type1/pu
-blic/lm/lmsy10.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public/lm/lmsy6.pfb>
-<c:/texlive/2014/texmf-dist/fonts/type1/public/lm/lmsy8.pfb><c:/texlive/2014/te
-xmf-dist/fonts/type1/public/lm/lmsy9.pfb><c:/texlive/2014/texmf-dist/fonts/type
-1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2014/texmf-dist/fonts/type1/pu
-blic/amsfonts/symbols/msbm10.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public
-/amsfonts/symbols/msbm7.pfb>
-Output written on main.pdf (17 pages, 7112140 bytes).
+ 47i,18n,42p,360b,290s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/texlive/2014/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.e
+nc}{c:/texlive/2014/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{c:/texlive/2014/te
+xmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/texlive/2014/texmf-dist/fonts/enc/dvi
+ps/lm/lm-mathit.enc}{c:/texlive/2014/texmf-dist/fonts/enc/dvips/lm/lm-mathex.en
+c}<c:/texlive/2014/texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb><c:/t
+exlive/2014/texmf-dist/fonts/type1/public/doublestroke/dsrom8.pfb><c:/texlive/2
+014/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/texlive/2014/texmf-dist/fon
+ts/type1/public/lm/lmex10.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public/lm
+/lmmi10.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public/lm/lmmi6.pfb><c:/tex
+live/2014/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/texlive/2014/texmf-dis
+t/fonts/type1/public/lm/lmmi9.pfb><c:/texlive/2014/texmf-dist/fonts/type1/publi
+c/lm/lmr10.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public/lm/lmr6.pfb><c:/t
+exlive/2014/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2014/texmf-di
+st/fonts/type1/public/lm/lmr9.pfb><c:/texlive/2014/texmf-dist/fonts/type1/publi
+c/lm/lmssbx10.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public/lm/lmsy10.pfb>
+<c:/texlive/2014/texmf-dist/fonts/type1/public/lm/lmsy6.pfb><c:/texlive/2014/te
+xmf-dist/fonts/type1/public/lm/lmsy8.pfb><c:/texlive/2014/texmf-dist/fonts/type
+1/public/lm/lmsy9.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/s
+ymbols/msam10.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/symbo
+ls/msbm10.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/symbols/m
+sbm7.pfb>
+Output written on main.pdf (19 pages, 7124441 bytes).
 PDF statistics:
- 154 PDF objects out of 1000 (max. 8388607)
- 110 compressed objects within 2 object streams
+ 161 PDF objects out of 1000 (max. 8388607)
+ 115 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

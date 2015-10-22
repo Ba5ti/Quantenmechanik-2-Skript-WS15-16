@@ -1,0 +1,96 @@
+	\underline{Goldene Regel:} für periodische Störung\marginpar{22.10.2015}
+		\begin{align*} 
+			W_{m \leftarrow n} &= 
+			\frac{2 \pi}{\hbar} \rho (E_n + \hbar \omega) \left|\braket{m | H_\omega | n}\right|^2 &
+			E_m &= E_m + \hbar \omega \text{~(Absorption)} \\
+			W_{m \leftarrow n} &= 
+			\frac{2 \pi}{\hbar} \rho (E_n - \hbar \omega) \left| \braket{m | H_\omega^\dagger | n}\right|^2 &
+			E_m &= E_n - \hbar \omega \text{~(Emission)}
+		\end{align*} \marginpar{bei dem 2ten braket fehlte das Betragsquadrat}
+	Dichte
+		\begin{align*}
+			\rho (E) = \int \diff \alpha \delta(E_\alpha - E)
+		\end{align*}
+	für kontinuierliches Spektrum $\ket{m} \sim \ket{\alpha}$.
+
+\subsection{Absorpiton und Emission von elektromagnetischer Strahlung}
+	Beispiel: Wasserstoffatom
+		\begin{align*}
+		e^- &: \text{Ladung~} q \\
+		m &: \text{Masse}
+		\end{align*}
+		\begin{align*}
+			H &= \frac{1}{2m} \left( \vec{p} + \frac{e}{c} \vec{A}' (\vec{r} , t)\right)^2
+			- e \phi' (\vec{r} , t) 
+			&\text{mit~} \vec{A}' &= \vec{A}_{proton} + \underbrace{\vec{A} (\vec{r} , t)}_{\mathclap{\text{Thomas, keine Ahnung was da stehen soll. (Photen von Welle)}}}		
+		\end{align*}
+	$\vec{A}' (\vec{r} , t)$ und $\phi' (\vec{r} , t)$ sind Beiträge von elektromagnetischer Welle und vom Proton (statisch). \marginpar{das kann so auch nicht stimmen}
+		\begin{align*}
+			\phi' (\vec{r} , t) &= \underbrace{\frac{e}{4 \pi \hbar c}}_{\mathclap{\text{statisches Feld von Protonen}}}
+			\frac{1}{r} + \phi (\vec{r} , t) \\
+			H &= \underbrace{H^0}_{\mathclap{\text{ungestört von Wasserstoff-Atom (zeitunabh.)}}}
+			+ \frac{e}{2 m c} \left( \vec{p} \vec{A} (\vec{r} , t) + \vec{A} (\vec{r} , t) \vec{p} + \frac{1 \cdot e^2}{2 m c^2} \vec{A}^2 (\vec{r} , t) - e\phi (\vec{r} , t) + \cdots 
+			\right)
+		\end{align*} 
+	$e \vec{A}$ klein $\Rightarrow e^2 \vec{A}^2$ vernachlässigen \\
+	$\Rightarrow$ Coulombeichung:
+		\begin{itemize}
+			\item $\vec{\nabla} \vec{A} = 0 \rightarrow \vec{p} \vec{A} = 0$ 
+			\item $\phi (\vec{r}, t) = \text{const.} = 0$
+		\end{itemize}
+		\begin{equation*}
+			\rightarrow H = H^0 +
+			\underbrace{\frac{e}{2 m c} \vec{A} (\vec{r} , t) \vec{p}}_{\mathclap{\text{Störterm~} H^1(t)}} 
+			= H^0 + H^1(t)
+		\end{equation*}
+	Man kann zeigen 
+		\begin{equation*}
+			\erw{\frac{\vec{p}}{m}} = \erw{\frac{i}{\hbar} \left[H^0 , \vec{r}\right]}
+		\end{equation*}
+	Nebenbedingung: Für Atome mit mehr als 1 $e^-$
+		\begin{align*}
+			\vec{p} &= \sum_i \vec{p}_i 
+			&\rightarrow \erw{\frac{\vec{p}}{m}} &= \frac{i}{\hbar} \erw{\left[H^0 , \vec{R}\right]}
+			&\text{mit~} \vec{R} &= \sum_i \vec{r}_i
+		\end{align*}
+	Betrachte elektromagnetische Welle
+		\begin{align*}
+			\vec{A}(\vec{r} , t) &= 
+			\mathrm{Re} \left[ \vphantom{ \vec{A}_0 \vec{\epsilon} ~ e^{i(\vec{k} \vec{r} - \omega t)}} \right.
+			\underbrace{\vec{A}_0}_{\mathclap{\in \mathds{C}}}
+			~ \underbrace{\vec{\epsilon}}_{\substack{\mathds{R}^3 \text{-Polarisations-} \\ \text{vektor mit~} |\vec{\epsilon}| = 1}}
+			~ e^{i(\vec{k} \vec{r} - \omega t)}
+			\left. \vphantom{ \vec{A}_0 \vec{\epsilon} ~ e^{i(\vec{k} \vec{r} - \omega t)}} \right] \\
+			\vec{\epsilon} ~\vec{k} &= 0
+		\end{align*}
+	Dispersionsrelation: 
+		\begin{equation*}
+			\omega = |\vec{k}| c
+		\end{equation*}
+	Hinweis 
+		\begin{align*}
+			\partial_{t} &= \vec{E} \\
+			\mathrm{rot} \vec{A} &= \vec{B}
+		\end{align*}
+	Intensität ists bestimmt durch $A_0^2$
+		\begin{align*}
+			\rightarrow I &= | \vec{S} | & \text{zeitliches Mittel ist nötig da $\vec{S}$ fluktuiert!}
+		\end{align*}
+	$| \vec{S} |$ ist Pointing-Vektor \marginpar{was soll der Strich darüber?}
+		\begin{align*}
+			| \vec{S} | &= c |\vec{E}| |\vec{B}| = c |E|^2 &\text{da~} |\vec{E}| &= |\vec{B}| \text{~ in Coulombeichung} \\
+			\text{mit~} \vec{E} &= \frac{1}{c} \partial_t \vec{A} 
+			&\rightarrow |\vec{S}| &= \frac{1}{c} \left|\partial_t \vec{A}\right|^2
+		\end{align*}
+	Somit ist die Intensität:
+		\begin{align*}
+			I &= \underbrace{\frac{\omega}{2 c}}_{\mathclap{\text{aus zeitlichem Mittel~} \int_{0}^{2 \pi} \diff \phi \frac{1}{2 \pi} \sin^2 \phi = \frac{1}{2}}}
+			|A_0|^2
+		\end{align*}
+	Mittlere Energiedichte der elektromagnetischen Welle
+		\begin{align*}
+			v (\vec{r}) &=
+			\frac{1}{2} \left( E^2(\vec{r} , t) + B^2(\vec{r} , t) \right) = \frac{1}{c} |\vec{S}| = 
+			\frac{I}{c} = \frac{\omega^2}{2 c^2} |A_0|^2 \\
+			v (\omega) &= \frac{\omega^2}{2 c^2} |A_0|^2
+		\end{align*}

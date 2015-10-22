@@ -74,9 +74,9 @@
 		\end{align*}
 	Intensität ists bestimmt durch $A_0^2$
 		\begin{align*}
-			\rightarrow I &= | \vec{S} | & \text{zeitliches Mittel ist nötig da $\vec{S}$ fluktuiert!}
+			\rightarrow I &= \overline{|\vec{S}|} & \text{zeitliches Mittel ist nötig da $\vec{S}$ fluktuiert!}
 		\end{align*}
-	$| \vec{S} |$ ist Pointing-Vektor \marginpar{was soll der Strich darüber?}
+	$| \vec{S} |$ ist Pointing-Vektor 
 		\begin{align*}
 			| \vec{S} | &= c |\vec{E}| |\vec{B}| = c |E|^2 &\text{da~} |\vec{E}| &= |\vec{B}| \text{~ in Coulombeichung} \\
 			\text{mit~} \vec{E} &= \frac{1}{c} \partial_t \vec{A} 
@@ -90,7 +90,28 @@
 	Mittlere Energiedichte der elektromagnetischen Welle
 		\begin{align*}
 			v (\vec{r}) &=
-			\frac{1}{2} \left( E^2(\vec{r} , t) + B^2(\vec{r} , t) \right) = \frac{1}{c} |\vec{S}| = 
+			\frac{1}{2} \overline{\left( E^2(\vec{r} , t) + B^2(\vec{r} , t) \right)} 
+			= \frac{1}{c} \overline{|\vec{S}|} = 
 			\frac{I}{c} = \frac{\omega^2}{2 c^2} |A_0|^2 \\
-			v (\omega) &= \frac{\omega^2}{2 c^2} |A_0|^2
+			\overline{v} (\omega) &= \frac{\omega^2}{2 c^2} |A_0|^2
 		\end{align*}
+	Störoperator in Coulombeichung
+		\begin{align*}
+			H^1 &= \frac{e}{2 m c} \vec{A} (\vec{r} , t) \vec{p} \\
+			&= \frac{e}{m c}
+			\left[A_0 e^{i(\vec{k} \vec{r} - \omega t)} ~\vec{\epsilon}~\vec{p}
+			+ A^*_0 e^{-i(\vec{k} \vec{r} - \omega t)} ~\vec{\epsilon}~\vec{p}
+			\right] \\
+			&+ \frac{e^2}{m c^2} \underbrace{|A_0|^2}_{\mathclap{\text{sehr klein~} \rightarrow \text{~wir vernachlässigen diesen}}} 
+			\left(1 + \cos \left(2 (\vec{k} \vec{r} - \omega t)\right)\right) \\
+			H^1 &= \underbrace{H_\omega}_{\mathclap{\frac{e}{m c} A_0 e^{i \vec{k} \vec{r}} \vec{\epsilon}~\vec{p}}} 
+			e^{-i \omega t} 
+			+ H_\omega^\dagger e^{i \omega t}
+		\end{align*}
+	Wir wollen nun $W_{m \leftarrow n}$ ausrechnen:
+		\begin{align*}
+			\left|\braket{m | \frac{e}{m c} A_0 e^{i \vec{k} \vec{r}} \vec{\epsilon}~\vec{p} |n}\right|^2
+			= \frac{e^2}{m^2 c^2} |A_0|^2 \left| \braket{m | e^{i \vec{k} \vec{p}} \vec{\epsilon}~\vec{p} | n}\right|^2
+		\end{align*}
+	
+	
